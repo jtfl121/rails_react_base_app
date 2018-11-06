@@ -1,0 +1,19 @@
+
+h1 {
+  font-size: 16;
+  font-weight: 400;
+}
+
+
+.main_table{
+  background-color: lightblue;
+  text-align: center;
+  .header_row{
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: red;
+  }
+  .body_row{
+    font-style: italic;
+  }
+}

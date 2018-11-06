@@ -33,21 +33,15 @@ componentDidMount(){
     .then(function () {
       // always executed
     });
-    // console.log(my_users)
-
-  // this.setState({
-  //   user: my_users
-  // })
-}
+  }
   
   render() {
-    console.log(this.state)
     return(
       <div>
         <h1>User</h1>
         {this.state.user.first_name}<br />
         {this.state.user.last_name}<br />
-        {this.state.user.age}<br />
+        {this.state.user.age}<br /> 
           <Link to='/about_us'>About us</Link>
 
       </div>

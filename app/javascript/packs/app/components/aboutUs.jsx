@@ -21,7 +21,6 @@ class AboutUs extends React.Component {
     axios.get('/get_users')
       .then(function (response) {
         // handle success
-        // console.log(response.data);
         self.setState({users: response.data})
       })
       .catch(function (error) {
@@ -31,35 +30,27 @@ class AboutUs extends React.Component {
       .then(function () {
         // always executed
       });
-      // console.log(my_users)
-
-    // this.setState({
-    //   user: my_users
-    // })
   }
   
   
   handleUser(){
-    console.log('clicked')
   }
   
   render() {
-    // console.log(this.state)
 
     return(
       <div>
         <h1>About US</h1>
         <Link to='/'>Home</Link>
-        <table style={{width: "100%"}}>
+        <table className='main_table'style={{width: "100%"}}>
           <tbody>
-            <tr>
+            <tr className='header_row'>
               <th>Firstname</th>
               <th>Lastname</th> 
               <th>Age</th>
             </tr>
             {this.state.users.map((user) =>
-            <tr key={user.first_name}>
-          
+            <tr className='body_row' key={user.first_name}>
               <td><Link to={'/users/' + user.id}>{user.first_name}</Link></td>
               <td>{user.last_name}</td> 
               <td>{user.age}</td>
